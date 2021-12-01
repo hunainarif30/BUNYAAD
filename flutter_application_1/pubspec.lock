@@ -180,3 +180,4 @@ packages:
 sdks:
   dart: ">=2.12.0 <3.0.0"
   flutter: ">=1.16.0"
+  provider: ">=6.0.1 <7.0.0"

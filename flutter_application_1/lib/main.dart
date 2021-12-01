@@ -10,7 +10,9 @@ import 'package:flutter_application_1/providers/builderAddNotifier.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(HomeApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (_) => BuilderAddNotifier()),
+  ], child: const HomeApp()));
 }
 
 class HomeApp extends StatelessWidget {
@@ -18,12 +20,8 @@ class HomeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-        create: (BuildContext context) {
-          return BuilderAddNotifier();
-        },
-        child: MaterialApp(
-          home: Signup(),
-        ));
+    return MaterialApp(
+      home: Signup(),
+    );
   }
 }

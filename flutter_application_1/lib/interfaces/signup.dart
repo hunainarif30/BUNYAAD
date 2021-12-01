@@ -191,10 +191,11 @@ class _SignupState extends State<Signup> {
                             listen: false)
                         .addBuilder(_firstname.text);
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Browse(),
-                        ));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Browse(),
+                      ),
+                    );
                   },
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)),
