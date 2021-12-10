@@ -20,6 +20,7 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.12.0 <3.0.0"
   provider: ^6.0.1
+
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -36,6 +37,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   provider: ^6.0.1
+  form_field_validator: ^1.1.0
+  shared_preferences: ^2.0.8
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +68,12 @@ flutter:
     - images/cons.jpg
     - images/signup_back.jpg
     - images/pp.jfif
+    - images/intro.jpg
+    - demo_builder/hassan.jpg
+    - demo_builder/taha.jpg
+    - demo_builder/khizer.jpg
+    - demo_builder/ramiz.jpg
+    - demo_builder/areeeb.jfif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

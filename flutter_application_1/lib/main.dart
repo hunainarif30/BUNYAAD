@@ -2,17 +2,26 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants.dart';
+import 'package:flutter_application_1/interfaces/intro_page.dart';
 import 'package:flutter_application_1/interfaces/login.dart';
 import 'package:flutter_application_1/interfaces/signup.dart';
 import 'package:flutter_application_1/interfaces/browse.dart';
 import 'package:flutter_application_1/interfaces/profile.dart';
 import 'package:flutter_application_1/providers/builderAddNotifier.dart';
+import 'package:flutter_application_1/providers/favBuilderNotifier.dart';
 import 'package:provider/provider.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
-  runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(create: (_) => BuilderAddNotifier()),
-  ], child: const HomeApp()));
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => BuilderAddNotifier()),
+        ChangeNotifierProvider(create: (_) => FavBuilderNotifier()),
+      ],
+      child: const HomeApp(),
+    ),
+  );
 }
 
 class HomeApp extends StatelessWidget {
@@ -21,7 +30,7 @@ class HomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Signup(),
+      home: Browse(),
     );
   }
 }
