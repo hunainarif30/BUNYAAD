@@ -7,10 +7,12 @@ import 'package:flutter_application_1/interfaces/login.dart';
 import 'package:flutter_application_1/interfaces/signup.dart';
 import 'package:flutter_application_1/interfaces/browse.dart';
 import 'package:flutter_application_1/interfaces/profile.dart';
+import 'package:flutter_application_1/interfaces/chat.dart';
+
+//import 'package:flutter_application_1/interfaces/splash_screen.dart';
 import 'package:flutter_application_1/providers/builderAddNotifier.dart';
 import 'package:flutter_application_1/providers/favBuilderNotifier.dart';
 import 'package:provider/provider.dart';
-import 'package:http/http.dart' as http;
 
 void main() {
   runApp(
@@ -30,7 +32,7 @@ class HomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Browse(),
+      home: intro_page(),
     );
   }
 }

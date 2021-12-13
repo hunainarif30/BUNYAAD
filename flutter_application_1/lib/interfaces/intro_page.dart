@@ -69,9 +69,6 @@ class intro_page extends StatelessWidget {
                     ),
                   ),
                   child: TextButton.icon(
-                    //shape: RoundedRectangleBorder(
-                    //  borderRadius: BorderRadius.circular(1.0)),
-                    //     color: Colors.blueGrey[300],
                     label: Icon(Icons.account_box_sharp),
                     onPressed: () {
                       Navigator.push(

@@ -112,11 +112,14 @@ class Profile extends StatelessWidget {
                     onPressed: () {},
                     color: kPrimaryColor,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    child: Text('Publish Job',
-                        style: TextStyle(
-                          color: Colors.white,
-                        )),
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    child: Text(
+                      'Hire Builder',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                 ],
               ),
