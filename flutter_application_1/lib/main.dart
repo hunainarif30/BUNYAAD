@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Controllers/builder_controller.dart';
 import 'package:flutter_application_1/Responses/Builder_Auth.dart';
 import 'package:flutter_application_1/constants.dart';
+import 'package:flutter_application_1/interfaces/edit_builder_profile.dart';
 import 'package:flutter_application_1/interfaces/intro_page.dart';
 import 'package:flutter_application_1/interfaces/login.dart';
+import 'package:flutter_application_1/interfaces/profile.dart';
 import 'package:flutter_application_1/interfaces/signup.dart';
 import 'package:flutter_application_1/interfaces/browse.dart';
 import 'package:flutter_application_1/interfaces/edit_profile.dart';
@@ -35,7 +37,7 @@ class HomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: intro_page(),
+      home: Intro_page(),
     );
   }
 }

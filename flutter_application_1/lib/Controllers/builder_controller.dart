@@ -64,12 +64,15 @@ class Builder_Controller extends ChangeNotifier {
 
 // Updating Builder Profile
   Future<dynamic> updateBuilderInfo(
+      String firstname,
+      String lastname,
       String job_detail,
       String qualification,
       String skills,
       String company_info,
       String website,
-      String industry) async {
+      String industry,
+      String phonenumber) async {
     try {
       var response = await http.put(
         Uri.parse('http://192.168.18.139:3000/api/builders/BuilderProfile'),
@@ -79,12 +82,15 @@ class Builder_Controller extends ChangeNotifier {
         },
         body: jsonEncode(
           <String, String>{
+            'Firstname': firstname,
+            'Lastname': lastname,
             'Jobdetail': job_detail,
             'Qualification': qualification,
             'Skills': skills,
             'Companyinfo': company_info,
             'Website': website,
-            'Industry': industry
+            'Industry': industry,
+            'Phone': phonenumber
           },
         ),
       );

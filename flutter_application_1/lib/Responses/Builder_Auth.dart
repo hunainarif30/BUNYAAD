@@ -11,11 +11,13 @@ import 'package:flutter_application_1/models/BuilderSignup.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 
-class BuilderLoginSignupController extends ChangeNotifier {
-  Builder1 builders;
-  Builder1 get getLoggedInBuilder => builders;
+Builder1 builders;
+//Builder1 get getLoggedInBuilder => builders1;
 
+class BuilderLoginSignupController extends ChangeNotifier {
   Builder_Controller builderController = Builder_Controller();
+
+  Builder1 get getLoggedInBuilder => builders;
 
   // Builder1 get getLoggedInBuilder => _builders;
   // BuilderLoginSignupController b;
@@ -26,8 +28,8 @@ class BuilderLoginSignupController extends ChangeNotifier {
   // }
 
   // bool _userIsLoggedIn = false;
-  Signup_builder(
-      String firstname, String lastname, String email, String password) async {
+  Signup_builder(String firstname, String lastname, String email,
+      String password, String phonenumber) async {
     var msg = '';
     try {
       final response = await http.post(
@@ -42,6 +44,7 @@ class BuilderLoginSignupController extends ChangeNotifier {
             'Lastname': lastname,
             'email': email,
             'password': password,
+            'Phone': phonenumber,
           },
         ),
       );
@@ -57,7 +60,9 @@ class BuilderLoginSignupController extends ChangeNotifier {
             await builderController.getAllUserDetails(email: builders.email);
         var decodedData1 = response1;
         builders = Builder1.fromJson(decodedData1);
-        print('qualification: ${builders.qualification}');
+
+        // print('qualification: ${builders.qualification}');
+        print(decodedData1);
 
         //  print('ok');
         msg = Signupresponse;

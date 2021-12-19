@@ -18,6 +18,7 @@ class Builder1 {
   String company_info;
   String website;
   String industry;
+  String phonenumber;
 
   Builder1(
       {this.firstname,
@@ -30,7 +31,8 @@ class Builder1 {
       this.job_detail,
       this.qualification,
       this.skills,
-      this.website});
+      this.website,
+      this.phonenumber});
   factory Builder1.fromJson(Map<String, dynamic> json) {
     return Builder1(
         firstname: json['Firstname'],
@@ -43,6 +45,7 @@ class Builder1 {
         skills: json['Skills'],
         company_info: json['Companyinfo'],
         website: json['Website'],
-        industry: json['Industry']);
+        industry: json['Industry'],
+        phonenumber: json['Phonen']);
   }
 }
