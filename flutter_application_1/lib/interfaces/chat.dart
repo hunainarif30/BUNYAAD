@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants.dart';
 
 class chat extends StatelessWidget {
-  chat({Key? key}) : super(key: key);
+  chat({Key key}) : super(key: key);
   final TextEditingController _message = TextEditingController();
 
   @override

@@ -14,7 +14,7 @@ import 'package:flutter_application_1/interfaces/FavBuilder.dart';
 import 'package:provider/provider.dart';
 
 class Browse extends StatefulWidget {
-  Browse({Key? key}) : super(key: key);
+  Browse({Key key}) : super(key: key);
   @override
   State<Browse> createState() => _BrowseState();
 }
@@ -204,21 +204,46 @@ class _BrowseState extends State<Browse> {
                       custom_card('Ramiz Zaheer', 'demo_builder/ramiz.jpg', 3,
                           'SERAIKI BUILDERS'),
                       // Consumer<BuilderAddNotifier>(
-                      //   builder: (context, builderAddNotifier, _) {
+                      //   builder: (context, BuilderAddNotifier, _) {
                       //     return Expanded(
                       //       child: ListView.builder(
-                      //         itemCount: builderAddNotifier.builderList.length,
+                      //         itemCount: BuilderAddNotifier.builderList.length,
                       //         itemBuilder: (BuildContext context, index) {
                       //           return Container(
-                      //             //height: 50.0,
-                      //             color: Colors.amber,
-                      //             child: Text(
-                      //               builderAddNotifier.builderList[index].BuilderFirstName,
-                      //               //  builderAddNotifier.builderList[index].BuilderLastName,
-                      //               style: TextStyle(
-                      //                 fontSize: 20.0,
-                      //                 color: Colors.white,
-                      //               ),
+                      //             height: 30.0,
+                      //             width: 30.0,
+                      //             child: Row(
+                      //               mainAxisAlignment:
+                      //                   MainAxisAlignment.spaceEvenly,
+                      //               children: [
+                      //                 Text(
+                      //                   BuilderAddNotifier.builderList[index]
+                      //                       .BuilderFirstName,
+                      //                   style: TextStyle(
+                      //                     fontSize: 15.0,
+                      //                     fontWeight: FontWeight.bold,
+                      //                     letterSpacing: 1.0,
+                      //                   ),
+                      //                 ),
+                      //                 Text(
+                      //                   BuilderAddNotifier
+                      //                       .builderList[index].BuilderLastName,
+                      //                   style: TextStyle(
+                      //                     fontSize: 10.0,
+                      //                     fontWeight: FontWeight.bold,
+                      //                     letterSpacing: 1.0,
+                      //                   ),
+                      //                 ),
+                      //                 Text(
+                      //                   BuilderAddNotifier
+                      //                       .builderList[index].BuilderEmail,
+                      //                   style: TextStyle(
+                      //                     fontSize: 10.0,
+                      //                     fontWeight: FontWeight.bold,
+                      //                     letterSpacing: 1.0,
+                      //                   ),
+                      //                 ),
+                      //               ],
                       //             ),
                       //           );
                       //         },

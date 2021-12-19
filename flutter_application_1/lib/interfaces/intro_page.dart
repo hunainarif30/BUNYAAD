@@ -5,7 +5,7 @@ import 'package:flutter_application_1/interfaces/login.dart';
 
 class intro_page extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
-  const intro_page({Key? key}) : super(key: key);
+  const intro_page({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

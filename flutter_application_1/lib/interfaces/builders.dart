@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/interfaces/browse.dart';
 import 'package:flutter_application_1/providers/builderAddNotifier.dart';
 
-class Builders {
-  String BuilderFirstName;
+// class Builders {
+//   String BuilderFirstName;
+//   String BuilderLastName;
+//   String BuilderEmail;
 
-  Builders(this.BuilderFirstName);
-}
+//   Builders(this.BuilderFirstName, this.BuilderLastName, this.BuilderEmail);
+// }
